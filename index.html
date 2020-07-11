@@ -1,0 +1,44 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>login state</h1> <br>
+        <p id="login-state"></p> <br>
+        <form action="">
+          email:  <input type="email" name="email" id="email">
+          password: <input type="password" name="password" id="password" >
+        </form>
+        Choose File:
+        <input type="file" onchange="chooseFile(event)" id="image-upload">
+        <button onclick="signInButtonPressed()" >SignIn</button> <br>
+        <button onclick="signUpButtonPressed()" id="signup-button" >SignUp</button> <br>
+        <button onclick="signOutButtonPressed()" id="signout-button">SignOut</button> <br>
+        <img src="" alt="" id="profile-pic"> <br>
+
+        <h2>PERSONAL DETAILS</h2> <br>
+        <form>
+          name: <input type="text" id="name" name="name"> <br>
+          age: <input type="number" id="age" name="age"> <br>
+        </form><br>
+
+        <h2>RETRIEVED DETAILS</h2>
+        <form>
+          <p id="name-retrieved"></p> <br>
+          <p id="age-retrieved"></p> <br>
+        </form>
+       
+        <button onclick="sendPersonalData()">Send</button> <br>
+        <button onclick="retrievePersonalData()" >Retrieve</button>
+
+
+       
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+
+
+        <script src="main.js"></script>
+    </body>
+</html>
